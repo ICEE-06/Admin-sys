@@ -17,3 +17,39 @@ Il est bien de noter qu'une autre technologie a émergée: les **conteneurs**. I
 - **flexibilité et évolutivité**
 
 ### Inconvénients
+La virtualisation présente des nombreux avantages, mais elle comporte aussi des inconvénient important qu'il faut bien comprendre avant de se lancé.
+
+Par exemple : Passé d'un ensemble des serveurs Physique a un architecture virtualisé est un projet complexe et coûteux au départ.
+
+Voici quelques inconvénient majeurs à prendre à comptes :
+- **Coût initial élevé** : il faut investir dans un serveur physique puissant, capable de supporter plusieurs machines virtuelles ainsi que dans des licences logiciels 
+-  **Ressources partagées** : Même si plusieurs VMs peuvent tourner sur un même hôte, chaque VM a besoin de ses propre ressources, ce qui demande une configuration matérielle bien dimensionner.
+- **Dépendance à un seul point de défaillance** : Si le serveur physique ou l'hyperviseur tombé en panne, toute les VMs hébergé peuvent être affectés.
+-  **Complexité des gestions**: La virtualisation ajoute une couche d'abstraction supplémentaire qui peut rendre la gestion, le dépannage et la sécurité plus complexe
+
+Exemple des virtualisations open-source :
+- KVM (Kernel Virtual Machine)
+- Xen
+- Proxmox VE
+- VirtualBox (Oracle )
+- QEMU
+Exemple des virtualisations proprétaire : 
+- VMWare ESX
+- Microsoft Hyper-V
+- Oracle VM Server
+- Nutanix
+- Parallèls Desktop
+
+#### Prérequis de la virtualisation
+
+pour mettre en place une serveur de virtualisation, certaine prérequis matérielle et logicielles sont indispensable :
+ - Un matérielle compatible : la machine physique doit avoir un processeur compatible avec la virtualisation, cela concerne la plupart des processeur Intel récent (VT-x et VT-d) et AMD (AMD-V et IOMMU). Ces options doit être activer dans le BIOS.
+ - Ressources suffisantes : Il faut prévoir assez de RAM et de stockage pour le système hôte, l'Hyperviseur et toute les VMs
+ - Logicielle d'hyperviseur : C'est le logicielle qui permet de créer et gérer des VMs
+	Le choix dépendra de votre besoin et de votre techniques.
+
+#### Hyperviseur type 1 et 2
+
+Un hyperviseur de type 1 correspond a un système qui s'installe directement sur la couche matérielle du serveur. On parle d'une Hyperviseur **native** .Lorsqu'un Hyperviseur de type 1 est installer sur une machine, la machine ne peut pas servir à autre qu'a faire tourné l'hyperviseur, elle est dédié a cette usage.  
+
+Un hyperviseur de type 2 est un logicielle qui s'installe et s'exécute sur une système d'exploitation qui est déjà en place.On parle un Hyperviseur **hébergé**.

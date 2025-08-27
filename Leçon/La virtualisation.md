@@ -1,7 +1,7 @@
 ## Définition
 C'est une technologie qui permet de créer plusieurs environnements virtuels à partir d'**un seul matériel physique**. C'est à dire, elle permet de diviser un seule machine physique en plusieurs machines virtuelles appelées **VM**. 
 
-Chaque machine virtuelle dispose de ses propres ressources virtuelles définit dans sac configuration : **mémoire vive, stockage, réseau, CPU, ....**. Les machines virtuelles sont isolées les unes des autres, mais elles peuvent communiquer entre elles via le **réseau**
+Chaque machine virtuelle dispose de ses propres ressources virtuelles définit dans sa configuration : **mémoire vive, stockage, réseau, CPU, ....**. Les machines virtuelles sont isolées les unes des autres, mais elles peuvent communiquer entre elles via le **réseau**
 
 La virtualisation s'appuie sur ce que l'on appel un **hyperviseur**. Nous pouvons dire que l'hyperviseur agit comme un chef d'orchestre, car il contrôle le matériel et assure la répartition des ressources entre les VM. Il existe des hyperviseurs de type **1** et **2**
 
@@ -25,7 +25,7 @@ Voici quelques inconvénient majeurs à prendre à comptes :
 - **Coût initial élevé** : il faut investir dans un serveur physique puissant, capable de supporter plusieurs machines virtuelles ainsi que dans des licences logiciels 
 -  **Ressources partagées** : Même si plusieurs VMs peuvent tourner sur un même hôte, chaque VM a besoin de ses propre ressources, ce qui demande une configuration matérielle bien dimensionner.
 - **Dépendance à un seul point de défaillance** : Si le serveur physique ou l'hyperviseur tombé en panne, toute les VMs hébergé peuvent être affectés.
--  **Complexité des gestions**: La virtualisation ajoute une couche d'abstraction supplémentaire qui peut rendre la gestion, le dépannage et la sécurité plus complexe
+-  **Complexité de gestions**: La virtualisation ajoute une couche d'abstraction supplémentaire qui peut rendre la gestion, le dépannage et la sécurité plus complexe
 
 Exemple des virtualisations open-source :
 - KVM (Kernel Virtual Machine)
@@ -50,6 +50,6 @@ pour mettre en place une serveur de virtualisation, certaine prérequis matérie
 
 #### Hyperviseur type 1 et 2
 
-Un hyperviseur de type 1 correspond a un système qui s'installe directement sur la couche matérielle du serveur. On parle d'une Hyperviseur **native** .Lorsqu'un Hyperviseur de type 1 est installer sur une machine, la machine ne peut pas servir à autre qu'a faire tourné l'hyperviseur, elle est dédié a cette usage.  
+Un hyperviseur de type 1 correspond a un système qui s'installe directement sur la couche matérielle du serveur. On parle d'une Hyperviseur **native** .Lorsqu'un Hyperviseur de type 1 est installé sur une machine, la machine ne peut pas servir à autre qu'a faire tourné l'hyperviseur, elle est dédié a cette usage.  
 
 Un hyperviseur de type 2 est un logicielle qui s'installe et s'exécute sur une système d'exploitation qui est déjà en place.On parle un Hyperviseur **hébergé**.
